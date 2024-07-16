@@ -40,7 +40,7 @@ bool getUnwrap(bool* grid, int x, int y) {
 }
 
 void drawGrid(bool* old, bool* new, Color col) {
-for (int x = 0; x < gridWidth; x++) {
+	for (int x = 0; x < gridWidth; x++) {
 		for (int y = 0; y < gridHeight; y++) {
 			bool res = getUnwrap(new, x, y);
 
