@@ -7,8 +7,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 set(CMAKE_BUILD_TYPE "Release")
 
 
-set(CMAKE_MAKE_PROGRAM "mingw32-make")
 if(WIN32)
+  set(CMAKE_MAKE_PROGRAM "mingw32-make")
   set(CMAKE_GENERATOR "MinGW Makefiles")
   set(CMAKE_GENERATOR_INSTANCE "")
 endif (WIN32)
