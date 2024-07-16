@@ -15,4 +15,5 @@ Support: Linux, Windows
 ./build_windows.bat
 ```
 (Binary might end up at `grain-of-life/build/grain-of-life.exe`)
+
 (Or it could also end up at `grain-of-life/build/grain-of-life.exe`)
