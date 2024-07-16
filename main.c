@@ -169,9 +169,10 @@ int main() {
 	SetTargetFPS(99999999);
 
 	RenderTexture2D tex = LoadRenderTexture(windowWidth, windowHeight);
+	Rectangle buffer_rec = {0.0, 0.0, windowWidth, -windowHeight};
+	Vector2 buffer_vec = {0.0, 0.0};
 
 	
-	float elapsed = 0;
 	while (!WindowShouldClose()) {
 		if (!paused) {
 			if (flipped)
@@ -181,13 +182,6 @@ int main() {
 
 			flipped = !flipped;
 		}
-
-		// elapsed += GetFrameTime();
-
-		// if (elapsed > 0.5) {
-		// 	printf("\r\033[KFPS: %2i", GetFPS());
-		// 	elapsed -= 0.5;
-		// }
 
 		if (IsKeyPressed(KEY_R)) {
 			for (int x = 0; x < gridWidth; x++) {
@@ -237,7 +231,7 @@ int main() {
 		BeginDrawing();
 
 			ClearBackground(BLACK);
-			DrawTexture(tex.texture, 0, 0, WHITE);
+			DrawTextureRec(tex.texture, buffer_rec, buffer_vec, WHITE);
 			DrawFPS(10, 10);
 
 		EndDrawing();
