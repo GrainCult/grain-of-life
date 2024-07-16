@@ -1,16 +1,23 @@
 # Grain of Life
 
-Support: Linux, Windows WIP
+Support: Linux, Windows
 
-## Building
+## Building for Linux
 
 ```bash
-git clone https://github.com/GrainCult/grain-of-life
-cd grain-of-life
 mkdir build
 cd build
 cmake ..
 make
 ```
+(Binary ends up at `grain-of-life/build/grain-of-life`)
 
-This should drop the binary in the `build` directory
+## Building for Windows
+
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release
+```
+(Binary ends up at `grain-of-life/build/Release/grain-of-life.exe`)
