@@ -16,4 +16,4 @@ Support: Linux, Windows
 ```
 (Binary might end up at `grain-of-life/build/grain-of-life.exe`)
 
-(Or it could also end up at `grain-of-life/build/grain-of-life.exe`)
+(Or it could also end up at `grain-of-life/build/Release/grain-of-life.exe`)
