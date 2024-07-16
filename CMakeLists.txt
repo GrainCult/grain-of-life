@@ -4,14 +4,10 @@ project(grain_of_life)
 # Generate compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
-set(CMAKE_BUILD_TYPE "Release")
+if (NOT CMAKE_BUILD_TYPE OR CMAKE_BUILD_TYPE STREQUAL "")
+    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
+endif()
 
-
-if(WIN32)
-  set(CMAKE_MAKE_PROGRAM "mingw32-make")
-  set(CMAKE_GENERATOR "MinGW Makefiles")
-  set(CMAKE_GENERATOR_INSTANCE "")
-endif (WIN32)
 
 # Dependencies
 set(RAYLIB_VERSION 5.0)

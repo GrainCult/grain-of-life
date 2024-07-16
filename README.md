@@ -5,19 +5,14 @@ Support: Linux, Windows
 ## Building for Linux
 
 ```bash
-mkdir build
-cd build
-cmake ..
-make
+./build_linux.sh
 ```
-(Binary ends up at `grain-of-life/build/grain-of-life`)
+(Binary should end up at `grain-of-life/build/grain-of-life`)
 
 ## Building for Windows
 
 ```bash
-mkdir build
-cd build
-cmake ..
-cmake --build . --config Release
+./build_windows.bat
 ```
-(Binary ends up at `grain-of-life/build/Release/grain-of-life.exe`)
+(Binary might end up at `grain-of-life/build/grain-of-life.exe`)
+(Or it could also end up at `grain-of-life/build/grain-of-life.exe`)
