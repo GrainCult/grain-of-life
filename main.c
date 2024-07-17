@@ -72,7 +72,7 @@ typedef struct WorkerData {
 void* worker(void* arg) {
 	WorkerData* data = (WorkerData*)arg;
 
-	for (int x = data->minX; x < data->maxX + 1; x++) {
+	for (int x = data->minX; x < data->maxX; x++) {
 		for (int y = data->minY; y < data->maxY; y++) {
 			int neighbors = 0;
 
@@ -127,7 +127,7 @@ void gameStep(bool* old, bool* new) {
 
 	WorkerData* workerDataHandles = malloc(threadCount*sizeof(WorkerData));
 
-	double div = (gridWidth - 1)/(double)threadCount;
+	double div = gridWidth/(double)threadCount;
 	for (int i = 0; i < threadCount; i++) {
 		WorkerData d = {
 			old,
