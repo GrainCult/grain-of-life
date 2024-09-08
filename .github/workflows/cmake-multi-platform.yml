@@ -50,7 +50,7 @@ jobs:
     - name:  Install
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          apt install libxrandr
+          sudo apt-get install -y libxrandr
         fi
       shell: bash
 
