@@ -89,7 +89,7 @@ jobs:
         if [ "$RUNNER_OS" == "Linux" ]; then
           cp grain_of_life artifacts
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          cp grain_of_life.exe artifacts
+          cp Release/grain_of_life.exe artifacts
         fi
 
     - name: Upload Artifacts
